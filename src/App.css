@@ -1,38 +1,356 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'Space-Grotesk-Medium';
+    src: url('./static/SpaceGrotesk-Medium.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Space-Grotesk';
+    src: url('./static/SpaceGrotesk-VariableFont_wght.ttf');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*, ::before, ::after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+#backdrop {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* CARD AND BACKGROUND SECTION */
+#background-gradient {
+    width: 100%;
+    height: 240px;
+    background-image: url('./images/bg-main-mobile.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-area {
+    width: 1px;
+    height: 1px;
+    position: relative;
+    font-family: 'Space-Grotesk';
+    font-weight: 500;
+    color: #fff;
+}
+
+#card-back {
+    width: 290px;
+    height: 160px;
+    background-image: url('./images/bg-card-back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -90px;
+    left: -120px;
+    border-radius: 10px;
+}
+
+#cvc {
+    position: absolute;
+    top: 71px;
+    right: 38px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+#card-front {
+    width: 290px;
+    height: 160px;
+    background-image: url('./images/bg-card-front.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 15px;
+    position: absolute;
+    top: 0;
+    left: -170px;
+    border-radius: 10px;
+}
+
+#circles {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#white-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#small-circle {
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#card-number {
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+#name-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+/* INFO SECTION */
+.default-info {
+    margin-top: 50px;
+    font-family: 'Space-Grotesk';
+    font-weight: 500;
+    padding: 50px 25px;
+    max-width: 500px;
+}
+
+.label-name {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 8px;
+    max-width: 50%;
+}
+
+.default-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 10px;
+    font-family: 'Space-Grotesk';
+    font-size: 18px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: hsla(279, 6%, 55%, 0.5);
+}
+
+.error-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid hsl(0, 100%, 66%);
+    border-radius: 10px;
+    font-family: 'Space-Grotesk';
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.error-msg {
+    color: hsl(0, 100%, 66%);
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+#month, #year {
+    width: 75px;
+    margin-right: 10px;
+}
+
+#small-labels {
+    display: flex;
+    align-items: center;
+}
+
+#date-label {
+    margin-right: 30px;
+}
+
+#small-inputs {
+    display: flex;
+    align-items: center;
+}
+
+#small-errors {
+    display: flex;
+    align-items: center;
+}
+
+#date-error {
+    margin-right: 60px;
+}
+
+.confirm {
+    width: 100%;
+    height: 55px;
+    background-color: hsl(278, 68%, 11%);
+    color: #fff;
+    font-family: 'Space-Grotesk';
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+/* CONFIRMATION PAGE STYLING */
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    padding: 50px 25px;
+    max-width: 500px;
+    font-family: 'Space-Grotesk';
+    font-weight: 500;
+}
+
+#thank-you {
+    font-size: 30px;
+    margin: 45px 0 20px 0;
+    letter-spacing: 3px;
+    color:hsl(278, 68%, 11%);
+}
+
+#added {
+    color: hsl(279, 6%, 55%);
+    font-size: 18px;
+}
+
+#continue {
+    margin-top: 50px;
+}
+
+/* DESKTOP STYLING */
+@media screen and (min-width: 1250px) {
+    #backdrop {
+        display: grid;
+        grid-template-columns: 483px auto;
+        grid-template-rows: 1fr;
+    }
+
+    /* GRADIENT AND CARDS */
+    #background-gradient {
+        background-image: url('./images/bg-main-desktop.png');
+        background-position: left;
+        width: 483px;
+        height: 100%;
+    }
+
+    #card-back {
+        top: 0;
+        left: 0;
+        width: 450px;
+        height: 250px;
+        box-shadow: 0 10px 20px #2b2b2b6e;
+    }
+
+    #cvc {
+        top: 113px;
+        right: 55px;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    #card-front {
+        top: -275px;
+        left: -100px;
+        width: 450px;
+        height: 250px;
+        padding: 35px;
+        box-shadow: 0 10px 20px #2b2b2b6e;
+    }
+
+    #circles {
+        margin-bottom: 70px;
+    }
+
+    #white-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    #small-circle {
+        width: 25px;
+        height: 25px;
+        margin-left: 15px;
+    }
+
+    #card-number {
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+
+    #name-date {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    /* INFO SECTION */
+    .default-info {
+        margin: 0 0 0 350px;
+        padding: 0;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .label-name {
+        margin-bottom: 10px;
+    }
+
+    .default-input {
+        margin-bottom: 20px;
+    }
+
+    .error-msg {
+        margin-bottom: 20px;
+    }
+
+    .confirm {
+        margin-top: 10px;
+    }
+
+    /* CONFIRMATION PAGE */
+    .confirmation {
+        margin: 0 0 0 350px;
+        padding: 0;
+        width: 400px;
+    }
+
+    #continue {
+        margin-top: 40px;
+    }
 }
