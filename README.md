@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Not a Real Card](https://your-live-site-url.com)
+- Live Site URL: [Not a Real Card](https://rkendall300.github.io/not-a-real-card/)
 
 ## My process
 
