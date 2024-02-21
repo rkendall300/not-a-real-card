@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/not-a-real-card/static/css/main.b356a9ab.css",
+    "main.js": "/not-a-real-card/static/js/main.2c96a20f.js",
+    "static/media/SpaceGrotesk-VariableFont_wght.ttf": "/not-a-real-card/static/media/SpaceGrotesk-VariableFont_wght.5771010795a77ba7459b.ttf",
+    "static/media/SpaceGrotesk-Medium.ttf": "/not-a-real-card/static/media/SpaceGrotesk-Medium.d188dfade7a12bbb16c1.ttf",
+    "static/media/bg-main-desktop.png": "/not-a-real-card/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
+    "static/media/bg-card-back.png": "/not-a-real-card/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
+    "static/media/bg-card-front.png": "/not-a-real-card/static/media/bg-card-front.8153e2ca184402a8385f.png",
+    "static/media/bg-main-mobile.png": "/not-a-real-card/static/media/bg-main-mobile.caa4689407777a312ede.png",
+    "index.html": "/not-a-real-card/index.html",
+    "static/media/icon-complete.svg": "/not-a-real-card/static/media/icon-complete.8fd757c0c5c44b1d597ca411400e046d.svg",
+    "main.b356a9ab.css.map": "/not-a-real-card/static/css/main.b356a9ab.css.map",
+    "main.2c96a20f.js.map": "/not-a-real-card/static/js/main.2c96a20f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b356a9ab.css",
+    "static/js/main.2c96a20f.js"
+  ]
+}
